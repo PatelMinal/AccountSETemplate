@@ -13,12 +13,7 @@ public class AccountMapRepository implements AccountRepository {
 	
 	
 	public String getAllAccounts() {
-		
-		//String allAccounts = " ";
-		//for (int i = 0; i<account.size(); i++) {
-
-			//allAccounts += util.getObjectForJSON(account.get(i));
-		//}
+	
 		return util.getJSONForObject(account);
 	}
 	
@@ -55,9 +50,14 @@ public class AccountMapRepository implements AccountRepository {
 	//	return util.getJSONForObject(account.get(accountnumber));
 	//}
 
-	public void getAccountbyFirstName() {
+	public int getCountForFirstNames(String firstName) {
 		int count = 0;
-		
+		for(Map.Entry<Long, Account> AccEntry; account.entrySet()) {
+			if(AccEntry.getValue().getFirstName().equals(firstName)) {
+				count ++;
+			}
+		}
+		return count; 
 		
 	}
 	
