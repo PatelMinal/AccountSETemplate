@@ -1,4 +1,4 @@
-package com.qa.service;
+package com.qa.business.service;
 
 import com.qa.persistence.domain.Account;
 
