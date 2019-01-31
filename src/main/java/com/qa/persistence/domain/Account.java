@@ -1,40 +1,35 @@
 package com.qa.persistence.domain;
 
+import java.util.Map;
+
+import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
+@Entity
 public class Account {
 	
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Id
-	private long id;
-
+	private Long id;
 	private String firstName;
-
 	private String lastName;
-
 	private int accountNumber;
-
-	public Account() {
-
-	}
 	
+	public Account() {
+	}
 	
 	public Account(String firstName, String lastName, int accountNumber) {
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.accountNumber = accountNumber;
 	}
-	
-	
 
 	public String getFirstName() {
 		return firstName;
-		
 	}
 
-	
 	public void setFirstName(String firstName) {
 		this.firstName = firstName;
 	}
@@ -43,7 +38,7 @@ public class Account {
 		return lastName;
 	}
 
-	public void setSecondName(String lastName) {
+	public void setLastName(String lastName) {
 		this.lastName = lastName;
 	}
 
@@ -54,7 +49,7 @@ public class Account {
 	public void setAccountNumber(int accountNumber) {
 		this.accountNumber = accountNumber;
 	}
-
+	
 	public Long getId() {
 		return id;
 	}
@@ -63,4 +58,11 @@ public class Account {
 		this.id = id;
 	}
 
+	public void put(Long id2, Map<Long, Account> account) {
+		// TODO Auto-generated method stub
+		
+	}
+
+
 }
+
