@@ -17,15 +17,14 @@ public class AccountEndpoint {
 	@Inject
 	private AccountService service;
 	
-	@Path("/getallaccounts")
-	
+	@Path("/getAllAccounts")
 	@GET
 	@Produces({ "application/json" })
 	public String getAllAccounts() {
 		return service.getAllAccounts();
 	}
 
-	@Path("/createaccount")
+	@Path("/createAccount")
 	@POST
 	@Produces({ "application/json" })
 	public String  createAccount(String account) {

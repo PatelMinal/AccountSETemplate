@@ -26,14 +26,15 @@ public class AccountDBRepositroy implements AccountRepository {
 	@Inject
 	private JSONUtil util;
 	
+	
 
 	
 	@Override
 	@Transactional(REQUIRED)
 	public String getAllAccounts() {
-		Query getaccount = manager.createQuery("SELECT from ACCOUNT a", Account.class);
-		Collection<Account> accounts = (Collection<Account>) getaccount.getResultList();
-		return util.getJSONForObject(getaccount);
+		Query query = manager.createQuery("SELECT from Account a", Account.class);
+		Collection<Account> accounts = (Collection<Account>) query.getResultList();
+		return util.getJSONForObject(query);
 	}
 
 	@Override

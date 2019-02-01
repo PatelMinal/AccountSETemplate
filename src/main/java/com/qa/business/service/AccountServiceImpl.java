@@ -8,8 +8,9 @@ import com.qa.persistence.repository.AccountRepository;
 
 public class AccountServiceImpl implements AccountService {
 	
+	
 	@Inject
-	private AccountService repo;
+	private AccountRepository repo;
 
 	@Override
 	public String getAllAccounts() {
